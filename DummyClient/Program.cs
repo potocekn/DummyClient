@@ -32,7 +32,7 @@ namespace DummyClient
             byte[] bytes2 = sendMessage(System.Text.Encoding.Unicode.GetBytes(JsonConvert.SerializeObject(request2)));
             var message2 = cleanMessage(bytes2);
             Console.WriteLine(message2);
-            Console.ReadLine();
+            
             ResponseResourcesForLanguages rrfl = JsonConvert.DeserializeObject<ResponseResourcesForLanguages>(message2);
             Console.WriteLine("Status" + rrfl.Status);
             Console.WriteLine("Type: " + rrfl.Type);
@@ -45,6 +45,12 @@ namespace DummyClient
                 }
             }
             Console.WriteLine();
+
+            Request request3 = new Request(RequestType.ALL_AVAILABLE_LANGUAGES, null);
+            byte[] bytes3 = sendMessage(System.Text.Encoding.Unicode.GetBytes(JsonConvert.SerializeObject(request3)));
+            var message3 = cleanMessage(bytes3);
+            Console.WriteLine(message3);
+            Console.ReadLine();
         }
         private static string cleanMessage(byte[] bytes)
         {

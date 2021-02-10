@@ -51,6 +51,7 @@
     <Compile Include="Request.cs" />
     <Compile Include="RequestType.cs" />
     <Compile Include="Response.cs" />
+    <Compile Include="ResponseAllAvailableLanguages.cs" />
     <Compile Include="ResponseChangedLanguages.cs" />
     <Compile Include="ResponseResourcesForLanguages.cs" />
     <Compile Include="ResponseStatus.cs" />
